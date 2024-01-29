@@ -16,9 +16,17 @@ public class ActivityB extends AppCompatActivity {
         int gelenYas=getIntent().getIntExtra("Yaş",0);
         double gelenBoy=getIntent().getDoubleExtra("Boy",0.0);
 
+        Kisiler gelenKisi= (Kisiler) getIntent().getSerializableExtra("nesne");
+
         Log.e("Gelen Mesaj",gelenMesaj);
         Log.e("Gelen Yaş",String.valueOf(gelenYas));
         Log.e("Gelen Boy",String.valueOf(gelenBoy));
+
+        Log.e("Gelen Tcno",String.valueOf(gelenKisi.getTcno()));
+        Log.e("Gelen İsim",gelenKisi.getIsim());
+        Log.e("Gelen Kişi Boy",String.valueOf(gelenKisi.getBoy()));
+
+
 
 
     }

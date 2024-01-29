@@ -26,10 +26,15 @@ public class MainActivity extends AppCompatActivity {
         binding.buttonGotoB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Kisiler kisi=new Kisiler(999,"Samet",1.73);
+
                 Intent yeniIntent=new Intent(MainActivity.this,ActivityB.class);
                 yeniIntent.putExtra("Mesaj","Merhaba");
                 yeniIntent.putExtra("Yaş",26);
                 yeniIntent.putExtra("Boy",1.78);
+
+                yeniIntent.putExtra("nesne",kisi);
                 startActivity(yeniIntent);
 
             }
