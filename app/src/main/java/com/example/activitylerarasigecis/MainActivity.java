@@ -23,5 +23,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(yeniIntent);
             }
         });
+        binding.buttonGotoB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent yeniIntent=new Intent(MainActivity.this,ActivityB.class);
+                yeniIntent.putExtra("Mesaj","Merhaba");
+                yeniIntent.putExtra("Yaş",26);
+                yeniIntent.putExtra("Boy",1.78);
+                startActivity(yeniIntent);
+
+            }
+        });
     }
 }
